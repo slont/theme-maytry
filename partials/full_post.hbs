@@ -1,0 +1,153 @@
+<!-- 記事画面 -->
+{{! The post content }}
+<div class="{{post_class}} content-container full_post"
+		 data-file="{{url}}"
+		 data-target=".word_counts">
+  <div class="row multi-col">
+    <div class="medium-9 column main-colmun">
+      <div class="blog-content card">
+				<div class="card-content">
+					<!-- ResponsiveDisplayAd01 -->
+					<div class="google-ad text-center">
+						<small>スポンサーリンク</small>
+						<ins class="adsbygoogle"
+								 style="display:block"
+								 data-ad-client="ca-pub-9576950957758188"
+								 data-ad-slot="8626094554"
+								 data-ad-format="auto"></ins>
+						<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+					</div>
+					<!-- ソーシャルボタン -->
+					<div class="social-area-syncer"></div>
+					<article class="word_counts" data-spy="scroll" data-target="#scroll-spy">
+						{{content addId=true}}
+					</article>
+					<!-- ソーシャルボタン -->
+					<div class="text-center show-for-small-only">↓気に入ったらシェアしてね↓</div>
+					<div class="social-area-syncer show-for-small-only"></div>
+					<!-- ResponsiveDispTextAd01 -->
+					<div class="google-ad text-center">
+						<small>スポンサーリンク</small>
+						<ins class="adsbygoogle"
+								 style="display:block"
+								 data-ad-client="ca-pub-9576950957758188"
+								 data-ad-slot="5533027355"
+								 data-ad-format="auto"></ins>
+						<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+					</div>
+
+					<div class="card card-dark card-posts">
+						<div class="card-header">
+							<div class="card-title">関連記事</div>
+						</div>
+						<div class="card-content">
+							{{related_tag_posts max=6 mode=1}}
+						</div>
+					</div>
+
+
+					<div class="card card-dark card-posts">
+						<div class="card-header">
+							<div class="card-title">新着記事</div>
+						</div>
+						<div class="card-content">
+							{{new_posts max=6 mode=1}}
+						</div>
+					</div>
+
+					<!-- 前後の投稿 -->
+					<div class="card card-dark card-prev-next row">
+						<div class="small-12 large-6 columns">
+							{{#prev_post}}
+								<a href="{{url}}" class="prev">
+									<h6>前の投稿</h6>
+									<p>{{title}}</p>
+								</a>
+							{{/prev_post}}
+						</div>
+						<div class="small-12 large-6 columns">
+							{{#next_post}}
+								<a href="{{url}}" class="next">
+									<h6>次の投稿</h6>
+									<p>{{title}}</p>
+								</a>
+							{{/next_post}}
+						</div>
+					</div>
+
+					{{#if author}}
+						<div class="card card-dark card-author">
+							<div class="card-header">
+								<div class="card-title">プロフィール</div>
+							</div>
+							<div class="card-content">
+								{{#author}}
+									{{#if image}}
+										<div class="author-img">
+											<img src="{{image}}" alt="{{name}}"/>
+										</div>
+									{{/if}}
+									<div class="author-status">
+										<h3>{{name}}</h3>
+										{{#if website}}
+											<span><a href="{{website}}" target="_blank">{{website}}</a></span>
+										{{/if}}
+										{{#if bio}}
+											<p>{{bio}}</p>
+										{{/if}}
+									</div>
+								{{/author}}
+							</div>
+						</div>
+					{{/if}}
+					{{> comments}}
+				</div>
+      </div>
+    </div>
+
+    <div class="medium-3 column side-column-right">
+			<div class="card card-dark card-ad">
+				<div class="card-header text-center">
+					<div>スポンサーリンク</div>
+				</div>
+				<div class="card-content">
+					<ins class="adsbygoogle"
+							 style="display: block;"
+							 data-ad-client="ca-pub-9576950957758188"
+							 data-ad-slot="5533027355"
+							 data-ad-format="auto"></ins>
+					<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+				</div>
+			</div>
+			<div class="card card-dark">
+				<div class="card-header text-center">
+					<div class="card-title">人気記事</div>
+				</div>
+				<div class="card-content">
+					{{popular_posts max=8 mode=1}}
+				</div>
+			</div>
+			<div class="card card-dark card-tags">
+				<div class="card-header text-center">
+					<div class="card-title">タグ</div>
+				</div>
+				<div class="card-content">
+					<div class="post-tags">{{tag_links all=true}}</div>
+				</div>
+			</div>
+			<div class="scroll-chaser">
+				<div class="card card-dark">
+					<div id="scroll-spy" class="card-content">
+						{{outline}}
+					</div>
+				</div>
+				<!-- ソーシャルボタン -->
+				<div class="card card-dark hide-for-small-only">
+					<div class="card-content">
+						<div class="social-area-syncer"></div>
+					</div>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
