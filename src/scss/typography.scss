@@ -4,10 +4,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-p {
-  color: black;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: $mt-font-family;
   font-style: normal;
@@ -71,15 +67,6 @@ pre {
       letter-spacing: 0;
     }
   }
-}
-
-p {
-  font-family: inherit;
-  font-weight: normal;
-  line-height: 1.4;
-  margin-bottom: 17px;
-  font-size: 1.1rem;
-  word-wrap: break-word;
 }
 
 hr {

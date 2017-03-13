@@ -18,7 +18,7 @@
     <div class="featured-info">
       <h1 class="post-title">{{title}}</h1>
       <div class="post-status hide-for-small-only">
-        <div class="post-tags">{{tag_links}}</div>
+        <ul class="mt-tags">{{tag_links}}</ul>
         <div class="post-edit-history">
           {{#author}}<a href="{{url}}">{{name}}</a>{{/author}}が{{date published_at format="YYYY年M月D日"}}に投稿（{{date updated_at format="YYYY年M月D日"}}更新）
         </div>
@@ -28,12 +28,12 @@
 
   <div class="blog-description-non-bg">
     <div class="post-status show-for-small-only">
-      <div class="post-tags">{{tag_links}}</div>
+      <ul class="mt-tags">{{tag_links}}</ul>
       <div class="post-edit-history">
         {{#author}}<a href="{{url}}">{{name}}</a>{{/author}}が{{date published_at format="YYYY年M月D日"}}に投稿（{{date updated_at format="YYYY年M月D日"}}更新）
       </div>
     </div>
   </div>
 
-	{{> full_post}}
+	{{> full-post}}
 {{/post}}

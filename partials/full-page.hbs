@@ -1,10 +1,10 @@
 <!-- 画面 -->
 {{! The post content }}
-<div class="{{post_class}} blog-container" data-file="{{url}}" data-target=".word_counts">
+<div class="{{post_class}} blog-container" data-file="{{url}}" data-target=".word-counts">
   <div class="row multi-col collapse">
     <div class="medium-2 columns">
       <div class="year_month">{{date published_at timeago="true"}}</div>
-      <div class="time_min"><span class="words"></span> words (<span class="eta"></span>)</div>
+      <div class="time-min"><span class="words"></span> words (<span class="eta"></span>)</div>
       <script>
           (function($){
             "use strict";
@@ -23,12 +23,12 @@
     </div>
     <div class="medium-8 columns">
       <div class="blog-content">
-        <div class="word_counts">
+        <div class="word-counts">
           {{content}}
         </div>
       </div>
     </div>
-    <div class="medium-2 columns post-tags">
+    <div class="medium-2 columns mt-tags">
       <p class="year_month">by <a href="{{url}}">{{author.name}}</a>
     </div>
   </div>

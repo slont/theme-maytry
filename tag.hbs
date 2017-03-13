@@ -35,7 +35,7 @@
 			<div class="card card-dark">
 				<div class="card-content">
 					{{#foreach posts}}
-						{{> content_post}}
+						{{> content-post}}
 					{{/foreach}}
 				</div>
 			</div>
@@ -68,7 +68,7 @@
 					<div class="card-title">タグ</div>
 				</div>
 				<div class="card-content">
-					<div class="post-tags">{{tag_links all=true}}</div>
+					<ul class="mt-tags">{{tag_links all=true}}</ul>
 				</div>
 			</div>
 		</div>

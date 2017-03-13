@@ -23,4 +23,8 @@ gulp.task('scss', function() {
 		.pipe(gulp.dest('assets/css/'))
 })
 
+gulp.task('watch', function(){
+		gulp.watch('./src/**/*', ['default'])
+})
+
 gulp.task('default', ['js', 'scss'])
