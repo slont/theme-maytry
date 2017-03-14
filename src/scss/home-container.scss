@@ -1,92 +1,96 @@
 .home-container {
 	.main-column {
 		.card-article {
-		  @extend .mt-raised;
-		  display: flex;
-		  height: 16em;
-		  transition: all .2s linear;
+			@extend .mt-raised;
+			display: flex;
+			height: 16em;
+			transition: all .2s linear;
 
-		  &:first-child {
-		    margin-top: 0;
-		  }
-		  &:last-child {
-		    margin-bottom: 0;
-		  }
-		  &:hover {
-		    box-shadow: 2px 3px 5px 7px rgba(0, 0, 0, .4);
-		    background-color: $mt-theme-color-brighter-1;
-		  }
-		  .card-image {
-		    width: 50%;
-		    overflow: hidden;
-		    transition: all .2s linear;
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:hover {
+				box-shadow: 2px 3px 5px 7px rgba(0, 0, 0, .4);
+				background-color: $mt-theme-color-brighter-1;
+			}
+			.card-image {
+				width: 50%;
+				overflow: hidden;
+				transition: all .2s linear;
 
-		    &:hover {
+				&:hover {
 					.trim img {
 						transform: scale(1.1);
 					}
 					.card-image-mask {
 						background-color: rgba(255, 255, 255, .1);
 					}
-		    }
-		    .trim {
-		      display: flex;
-		      align-items: center;
-		      height: 100%;
+				}
+				.trim {
+					display: flex;
+					align-items: center;
+					height: 100%;
 
 					img {
-			    	transition: all .2s linear;
+						transition: all .2s linear;
 					}
-		    }
+				}
 				.card-image-mask {
 					position: absolute;
 					top: 0;
 					width: 100%;
 					height: 100%;
 					background-color: rgba(255, 255, 255, 0);
-		    	transition: all .2s linear;
+					transition: all .2s linear;
 				}
-		  }
-		  .card-content {
-		    display: flex;
-		    flex-flow: column;
-		    width: 50%;
-		    padding: 1em;
-		    color: #c5c5c5;
-		    word-wrap: break-word;
+			}
+			.card-content {
+				display: flex;
+				flex-flow: column;
+				width: 50%;
+				padding: 1em;
+				color: #c5c5c5;
+				word-wrap: break-word;
 
-		    .published-date {
-		      color: #c5c5c5;
-		    }
-		    .card-title {
-		      font-size: 1.6em;
-		      font-weight: bold;
-		      margin: .2em 0 .3em;
+				.published-date {
+					color: #c5c5c5;
+				}
+				.card-title {
+					font-size: 1.6em;
+					font-weight: bold;
+					margin: .2em 0 .3em;
+					overflow: hidden;
 
-		      a {
-		        max-width: 100%;
-		        line-height: 1.2;
-		        color: white;
+					a {
+						max-width: 100%;
+						line-height: 1.2;
+						color: white;
 
-		        &:hover {
-		          color: $emphasis-color;
-		        }
-		      }
-		    }
-		  }
+						&:hover {
+							color: $emphasis-color;
+						}
+					}
+				}
+				p {
+					margin-top: .5em;
+				}
+			}
 			@media only screen and (max-width: 919px) {
-		    flex-flow: column;
-		    height: inherit;
+				flex-flow: column;
+				height: inherit;
 
-		    .card-image {
-		      display: flex;
-		      align-items: center;
-		      width: 100%;
-		      max-height: 18em;
-		    }
-		    .card-content {
-		      width: 100%;
-		    }
+				.card-image {
+					display: flex;
+					align-items: center;
+					width: 100%;
+					max-height: 18em;
+				}
+				.card-content {
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -95,37 +99,34 @@
 
 		.simple-image-post {
 			@extend .card-dark, .mt-raised;
-		  min-height: 6em;
+			min-height: 6em;
 			margin-bottom: 1.2em;
 
 			&:last-child {
 				margin-bottom: 0;
 			}
-		  a {
-		    font-size: 1.4em;
-		    display: flex;
-		    align-items: center;
+			a {
+				font-size: 1.4em;
+				display: flex;
+				align-items: center;
 
-				&:hover {
-			    background-color: $mt-theme-color-brighter-1;
-				}
-		    .rank {
-		      width: 10%;
+				.rank {
+					width: 10%;
 					padding: .3em;
-		    }
-		    .trim {
-		      width: 45%;
-		      height: 7em;
+				}
+				.trim {
+					width: 45%;
+					height: 7em;
 
 					img {
-            position: absolute;
+						position: absolute;
 					}
-		    }
-		    .title {
-		      line-height: 1.4;
-		      width: 45%;
-		    }
-		  }
+				}
+				.title {
+					line-height: 1.4;
+					width: 45%;
+				}
+			}
 			@media only screen and (max-width: 919px) {
 				a {
 					flex-flow: column;
@@ -137,9 +138,9 @@
 						width: inherit;
 						height: 12em;
 
-            img {
-              height: 100%;
-            }
+						img {
+							height: 100%;
+						}
 					}
 					.title {
 						width: 100%;

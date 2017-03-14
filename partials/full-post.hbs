@@ -3,9 +3,9 @@
 <div class="{{post_class}} content-container blog-container"
 		 data-file="{{url}}"
 		 data-target=".word-counts">
-  <div class="row multi-col">
-    <div class="medium-8 column main-column">
-      <div class="blog-content card mt-droped">
+	<div class="row multi-col">
+		<div class="medium-8 column main-column">
+			<div class="blog-content card mt-droped">
 				<div class="card-content">
 					<!-- ResponsiveDisplayAd01 -->
 					<div class="google-ad text-center">
@@ -111,10 +111,10 @@
 					{{/if}}
 					{{> comments}}
 				</div>
-      </div>
-    </div>
+			</div>
+		</div>
 
-    <div class="medium-4 column side-column">
+		<div class="medium-4 column side-column">
 			<div class="card card-dark card-ad">
 				<div class="card-header text-center">
 					<div>スポンサーリンク</div>
@@ -133,8 +133,7 @@
 					<div class="card-title">人気記事</div>
 				</div>
 				<div class="card-content popular-posts simple-image-posts">
-					{{new_posts max=8 mode=1}}
-					<!-- {{popular_posts max=8 mode=1}} -->
+					{{popular_posts max=8 mode=1}}
 				</div>
 			</div>
 			<div class="card card-dark">
@@ -146,18 +145,18 @@
 				</div>
 			</div>
 			<div class="scroll-chaser">
-				<div class="card mt-droped">
+				<div class="card mt-droped outline-container">
 					<div id="scroll-spy" class="card-content">
 						{{outline}}
 					</div>
 				</div>
 				<!-- ソーシャルボタン -->
-				<div class="card mt-droped hide-for-small-only">
+				<div class="card mt-droped social-container hide-for-small-only">
 					<div class="card-content">
 						<div class="social-area-syncer"></div>
 					</div>
 				</div>
 			</div>
-    </div>
-  </div>
+		</div>
+	</div>
 </div>
