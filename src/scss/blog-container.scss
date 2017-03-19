@@ -21,6 +21,9 @@
 						list-style-type: disc;
 					}
 				}
+				p {
+					word-wrap: break-word;
+				}
 				h2 {
 					font-size: 34px;
 					border-bottom: 1px solid $emphasis-color;
