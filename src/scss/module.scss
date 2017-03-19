@@ -149,13 +149,6 @@ p.year_month {
 
 	.jssocials-share {
 		display: block;
-
-		&:first-child {
-			margin-left: .3em;
-		}
-		&:last-child {
-			margin-right: .3em;
-		}
 	}
 }
 
@@ -165,47 +158,40 @@ p.year_month {
 
 	> .card-content {
 		padding: 0 .5em;
+
+    .outline {
+    	max-height: 240px;
+    	overflow-y: scroll;
+
+    	.navbar {
+    		padding: 1em 0;
+
+    		ul {
+    			li {
+    				line-height: 1.6em;
+
+    				a {
+    					padding: .1em;
+    					display: block;
+    				}
+
+    				&.active,
+    				&:hover {
+    					> a {
+    						margin-left: -3px;
+    						color: $mt-theme-color;
+    						border-left: 3px solid $mt-theme-color;
+    					}
+    				}
+    			}
+    		}
+    	}
+    }
 	}
 }
 
 .social-container {
 	background-color: white;
-}
-
-.outline {
-	max-height: 240px;
-	overflow-y: scroll;
-
-	.navbar {
-		height: inherit;
-		margin: -5px 0 -5px;
-		padding: 5px 0;
-
-		ul {
-			font-size: 12px;
-
-			li {
-				line-height: 16px;
-
-				a {
-					width: 98%;
-					padding: 2px;
-					color: black;
-					text-decoration: none;
-					display: block;
-				}
-
-				&.active,
-				&:hover {
-					> a {
-						margin-left: -3px;
-						color: $emphasis-color;
-						border-left: 3px solid $emphasis-color;
-					}
-				}
-			}
-		}
-	}
 }
 
 .simple-image-posts {
@@ -348,4 +334,8 @@ p.year_month {
 		left: 0;
 		right: 0;
 	}
+}
+
+.white-shadow {
+  box-shadow: 1px 1px 5px 3px rgba(255,255,255,.3);
 }

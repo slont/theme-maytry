@@ -76,6 +76,9 @@
 					}
 				}
 			}
+      .jssocials-shares {
+        margin: 1em 0;
+      }
 			.simple-image-posts {
 				display: flex;
 
@@ -148,11 +151,6 @@
 				}
 			}
 			@media only screen and (max-width: 919px) {
-				background: $background-color;
-				border-radius: 10px; /* CSS3草案 */
-				-webkit-border-radius: 10px; /* Safari,Google Chrome用 */
-				-moz-border-radius: 10px; /* Firefox用 */
-
 				.simple-image-posts {
 					.simple-image-post {
 						width: 50%;
@@ -292,17 +290,6 @@
 					.trim {
 						height: 16em;
 						position: relative;
-					}
-				}
-			}
-		}
-		.outline {
-			.navbar {
-				ul {
-					font-size: 18px;
-
-					li {
-						line-height: inherit;
 					}
 				}
 			}
