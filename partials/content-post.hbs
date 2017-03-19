@@ -1,0 +1,22 @@
+<!-- トップ画面 -->
+{{! The post content }}
+<div class="card-article card card-dark">
+	<a href="{{url}}" class="card-image">
+		<div class="trim">
+			{{#if image}}
+				<img src="{{image}}">
+			{{else}}
+				<img src="/assets/images/title_logo.png">
+			{{/if}}
+		</div>
+		<div class="card-image-mask"></div>
+	</a>
+	<div class="card-content">
+		<div class="published-date right">{{date published_at}}</div>
+		<div class="card-title">
+			<a href="{{url}}" class="overlay-effect">{{title}}</a>
+		</div>
+		<ul class="mt-tags">{{tag_links}}</ul>
+		<p class="description">{{excerpt characters=100}}...</p>
+	</div>
+</div>

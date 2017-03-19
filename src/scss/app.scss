@@ -1,21 +1,24 @@
 /* Bundle */
 
 @import '../css/normalize';
-@import '../css/foundation.min';
 @import '../css/font-awesome.min';
+@import '../css/foundation.min';
 @import '../css/jssocials';
 @import '../css/jssocials-theme-flat';
 @import '../css/slicknav';
 @import '../css/tomorrow-night-bright';
 
+@import 'constant';
+@import 'materialize.ow';
 @import 'base';
+@import 'module';
 @import 'author';
-@import 'content';
+@import 'blog-container';
+@import 'home-container';
 @import 'cover';
 @import 'description';
 @import 'footer';
 @import 'header';
 @import 'misc';
-@import 'module';
 @import 'paginate';
 @import 'typography';

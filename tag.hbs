@@ -1,45 +1,45 @@
 {{!< default}}
 
 {{#tag}}
-  <div class="blog-cover-container">
-    <div class="featured-image">
-      {{#if image}}
-        <img src="{{image}}" alt="{{name}}"/>
-      {{else}}
-        {{#if @blog.cover}}
-          <img src="{{@blog.cover}}" alt="{{name}}"/>
-        {{else}}
-          <img src="{{asset "images/HIRO95_ukabukuragetotokyo_resize.jpg"}}" alt="{{tag.name}}"/>
-        {{/if}}
-      {{/if}}
-    </div>
-    <div class="featured-info">
-      <h1>{{name}}</h1>
-    </div>
-  </div>
+	<div class="blog-cover-container">
+		<div class="featured-image">
+			{{#if image}}
+				<img src="{{image}}" alt="{{name}}"/>
+			{{else}}
+				{{#if @blog.cover}}
+					<img src="{{@blog.cover}}" alt="{{@blog.title}}"/>
+				{{else}}
+					<img src="{{asset "images/HIRO95_ukabukuragetotokyo_resize.jpg"}}" alt="{{tag.name}}"/>
+				{{/if}}
+			{{/if}}
+		</div>
+		<div class="featured-info">
+			<h1>{{name}}</h1>
+		</div>
+	</div>
 
-  {{#if description}}
-    <div class="tag-description">
-      <div class="row">
-        <div class="small-12 columns">
-          <p>{{description}}</p>
-        </div>
-      </div>
-    </div>
-  {{/if}}
+	{{#if description}}
+		<div class="tag-description">
+			<div class="row">
+				<div class="small-12 columns">
+					<p>{{description}}</p>
+				</div>
+			</div>
+		</div>
+	{{/if}}
 {{/tag}}
 
-<div class="content-container">
-  <div class="row">
-    <div class="medium-8 column main-column">
-			<div class="card card-dark">
+<div class="content-container home-container">
+	<div class="row">
+		<div class="medium-8 column main-column">
+			<div class="card mt-droped">
 				<div class="card-content">
 					{{#foreach posts}}
-						{{> content_post}}
+						{{> content-post}}
 					{{/foreach}}
 				</div>
 			</div>
-    </div>
+		</div>
 		<div class="medium-4 column side-column-right">
 			<!-- ResponsiveDisplayAd01 -->
 			<div class="card card-dark card-ad">
@@ -55,24 +55,24 @@
 					<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 				</div>
 			</div>
-			<div class="card card-dark">
-				<div class="card-header text-center">
+			<div class="card mt-droped">
+				<div class="card-header card card-dark mt-raised text-center">
 					<div class="card-title">人気記事</div>
 				</div>
-				<div class="card-content">
+				<div class="card-content popular-posts simple-image-posts">
 					{{popular_posts max=8 mode=1}}
 				</div>
 			</div>
-			<div class="tags-area card card-dark">
+			<div class="card card-dark">
 				<div class="card-header text-center">
 					<div class="card-title">タグ</div>
 				</div>
 				<div class="card-content">
-					<div class="post-tags">{{tag_links all=true}}</div>
+					<ul class="mt-tags">{{tag_links all=true}}</ul>
 				</div>
 			</div>
 		</div>
-  </div>
+	</div>
 </div>
 
 {{pagination}}

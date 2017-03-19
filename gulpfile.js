@@ -7,7 +7,7 @@ const rename = require('gulp-rename')
 const plumber = require('gulp-plumber')
 
 gulp.task('js', function() {
-	gulp.src('src/js/*.js')
+	gulp.src(['highlight.pack.js', 'jquery.slicknav.min.js', 'jssocials.min.js', 'scrollchaser.js', 'app.js'], { cwd: 'src/js/' })
 		.pipe(plumber())
 		.pipe(concat('app.min.js'))
 		.pipe(uglify())
@@ -21,6 +21,10 @@ gulp.task('scss', function() {
 		.pipe(cleanCss())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('assets/css/'))
+})
+
+gulp.task('watch', function(){
+		gulp.watch('./src/**/*', ['default'])
 })
 
 gulp.task('default', ['js', 'scss'])
